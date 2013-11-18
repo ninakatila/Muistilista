@@ -1,43 +1,33 @@
-create table kayttaja (
-id serial primary key,
-sukunimi varchar (80) not null,
+CREATE TABLE kayttaja (
+id serial PRIMARY KEY,
+sukunimi varchar (80),
 etunimi varchar (80),
 puhelin varchar (14),
 mail varchar (80),
-tunnus varchar (12),
+tunnus varchar (12) UNIQUE,
 ssana varchar (12));
 
-create table luokka (
-id serial primary key,
+CREATE TABLE luokka (
+id serial PRIMARY KEY,
 luokka varchar(20),
 kuvaus varchar (400),
-kayttajaid integer,
-foreign key (kayttajaid) references kayttaja);
+kayttajaid integer REFERENCES kayttaja(id) ON DELETE CASCADE);
 
-create table tarkeys (
-id serial primary key,
-arvo integer (4),
+CREATE TABLE tarkeys (
+id serial PRIMARY KEY,
+arvo integer,
 maarittely varchar (400),
-kayttajaid integer,
-foreign key (kayttajaid) references kayttaja);
+kayttajaid integer REFERENCES kayttaja(ID) ON DELETE CASCADE);
 
-create table tehtava (
+CREATE TABLE tehtava (
 id serial primary key,
 tehtava varchar (80),
 tehtavakuvaus varchar (1200),
-luokka varchar (200),
-tarkeys integer,
-kayttajaid integer,
-foreign key (luokka) references luokka,
-foreign key (tarkeys) references tarkeys,
-foreign key (kayttajaid) references kayttaja);
+luokka integer REFERENCES luokka (id) ON DELETE CASCADE,
+tarkeys integer REFERENCES tarkeys (id) ON DELETE CASCADE,
+kayttajaid integer REFERENCES kayttaja(ID) ON DELETE CASCADE);
 
-create table luokitus (
-tehtavaid integer,
-luokkaid integers,
-primay key (tehtavaid, luokkaid),
-foreign key (tehtavaid) references tehtava,
-foreign key (luokkaid) references luokka);
-
-
+CREATE TABLE luokitus (
+tehtavaid integer REFERENCES tehtava (id) ON DELETE CASCADE,
+luokkaid integer REFERENCES luokka (id) ON DELETE CASCADE);
 

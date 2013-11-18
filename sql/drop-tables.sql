@@ -7,6 +7,3 @@ drop table tarkeys;
 drop table luokka;
 
 drop table kayttaja;
-
-
-

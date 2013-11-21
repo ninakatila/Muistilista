@@ -9,4 +9,11 @@
 root { 
     display: block;
 }
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #efc;
+    margin-left: 4em;
+    margin-right: 20%
+}
+
 

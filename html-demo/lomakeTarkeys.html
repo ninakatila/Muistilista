@@ -10,10 +10,39 @@
     </head>
     <body>
         <ul class="nav nav-tabs">
-            <li><a href="Muistilista.html">Muistilista</a></li>
-            <li><a href="Luokka.html">Luokka</a></li>
-            <li class="active"><a href="Tarkeys.html">Tärkeys</a></li>
+            <li><a href="Muistilista.html"><h2>Muistilista</h2></a></li>
+            <li><a href="Luokka.html"><h2>Luokka</h2></a></li>
+            <li class="active"><a href="Tarkeys.html"><h2>Tärkeys</h2></a></li>
         </ul>
-        <div>TODO write content</div>
+        <br>
+        <h2>TÄRKEYS</h2>
+        <hr>
+        <form class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label" for="inputTarkeysArvo">Arvo</label>
+                <div class="controls">
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <br>
+                <label class="control-label" for="inputTarkeysMaarittely">Määrittely</label>
+                <div class="controls">
+                    <textarea rows="5"></textarea>
+                </div>
+                <br>
+                
+            </div>
+            <br>
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" class="btn-default">Tallenna tärkeys</button>
+                    <button type="submit" class="btn-default">Poista tärkeys</button>
+                </div>
+            </div>
+            </form>
+        
     </body>
 </html>

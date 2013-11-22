@@ -9,11 +9,54 @@
         <link href="../css/main.css" rel="stylesheet">
     </head>
     <body>
+        <br>
         <ul class="nav nav-tabs">
-            <li class="active"><a href="Muistilista.html">Muistilista</a></li>
-            <li><a href="Luokka.html">Luokka</a></li>
-            <li><a href="Tarkeys.html">Tärkeys</a></li>
+            <li class="active"><a href="Muistilista.html"><h2>Muistilista</h2></a></li>
+            <li><a href="Luokka.html"><h2>Luokka</h2></a></li>
+            <li><a href="Tarkeys.html"><h2>Tärkeys</h2></a></li>
         </ul>
-        <div>TODO write content</div>
+        <br>
+        <h1>TEHTÄVÄ</h1>
+        <hr>
+        <form class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label" for="inputTehtava">Tehtävän nimi</label>
+                <div class="controls">
+                    <input type="text" id="inputTehtava" placeholder="Tehtävän nimi">
+                </div>
+                <br>
+                <label class="control-label" for="inputTehtavakuvaus">Tehtävän kuvaus</label>
+                <div class="controls">
+                    <textarea class="input" rows="5"></textarea>
+                </div>
+                <br>
+                <label class="control-label" for="inputLuokka">Tehtävän luokka</label>
+                <div class="controls">
+                    <select multiple="multiple">
+                        <option>luokka 1 </option>
+                        <option>luokka 2 </option>
+                        <option>luokka 3 </option>
+                    </select>
+                </div>
+                <br>
+                <label class="control-label" for="inputTarkeysArvo">Tehtävän tärkeys</label>
+                <div class="controls">
+                    <select class="span1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <br>                
+            </div>
+            <br>
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" class="btn-default">Tallenna tehtävä</button>
+                    <button type="submit" class="btn-default">Poista tehtävä</button>
+                </div>
+            </div>
+            </form>
+        
     </body>
 </html>

@@ -1,3 +1,4 @@
+<?php ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,25 +17,9 @@
             <li><a href="Tarkeys.html"><h2>Tärkeys</h2></a></li>
         </ul>
         <br>
-       <table class="table table-bordered">
-           <thead>
-            <tr>
-                <th>Muistilistalla olevat tehtävät</th>
-            </tr>
-            <tr>
-                <th>Tehtävä</th>
-                <th>Luokka</th>
-                <th>Tärkeys</th>
-            </tr>
-            </thead>
-            <tbody>
-                <tr>
-                <td>JYM laskarit</td>
-                <td>Koulu</td>
-                <td>1</td>                
-            </tr>
-            </tbody>
-        </table>
+            <?php require $sivu; ?>
+            
+        
         <button class="btn btn-default" type="button"><a href="lomakeTehtava.html">
                 Lisää uusi</a></button>
         
